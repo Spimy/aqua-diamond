@@ -1,0 +1,113 @@
+#sticky_nav {
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @media (min-width: 720px) {
+        background-color: $primary;
+        bottom: initial;
+        right: initial;
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: .25rem 5rem;
+        width: 100%
+    }
+
+    .icon {
+        display: none;
+
+        @media (min-width: 720px) {
+            display: block;
+            width: 40px;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    nav {
+
+        font-size: .75rem;
+
+        a {
+            display: none;
+
+            @media (min-width: 720px) {
+                display: initial;
+                margin-left: 1em;
+
+                padding: .5em .75em;
+                border-radius: .25em;
+
+                &:hover {
+                    background-color: rgba($bg-primary, .5);
+                }
+
+                i {
+                    margin-right: .5em;
+                }
+
+            }
+
+        }
+
+        &.open {
+
+            a {
+                height: 100%;
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            a:hover,
+            button:hover {
+                color: $secondary;
+            }
+
+            display: grid;
+            grid-template-rows: repeat(2, 3em);
+            grid-template-columns: repeat(3, 3em);
+            gap: .75rem;
+
+            background-color: $primary;
+            padding: 1em;
+            border-top-left-radius: .5em;
+            border-top-right-radius: .5em;
+            border-bottom-left-radius: .5em;
+        }
+
+    }
+
+    button {
+        border-radius: .25em;
+        background-color: $primary;
+        width: 3em;
+        height: 3em;
+
+        &.open {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        @media (min-width: 720px) {
+            display: none;
+            position: absolute;
+            bottom: 1rem;
+            right: 1.5rem;
+        }
+
+    }
+
+}
