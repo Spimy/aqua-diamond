@@ -49,3 +49,95 @@ button {
     color: $text;
     border: none;
 }
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size: 1rem + .5 * (6 - $i);
+        margin: 0;
+    }
+}
+
+.container {
+    margin: 0 5rem;
+}
+
+#msg_box {
+    background-color: $primary;
+    color: $secondary;
+    border: 2px solid $secondary;
+    border-radius: .25rem;
+    padding: 1rem;
+    width: 75%;
+
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+
+    &.show {
+        visibility: visible;
+        animation: fadeinMobile 0.5s, fadeoutMobile 0.5s 4.5s;
+    }
+
+    @media (min-width: 720px) {
+        top: 5rem;
+        right: 2rem;
+        left: initial;
+        transform: translateX(0);
+        width: 25%;
+
+        &.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 4.5s;
+        }
+    }
+}
+
+@keyframes fadeinMobile {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 1rem;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeoutMobile {
+    from {
+        top: 1rem;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadein {
+    from {
+        top: 0;
+        opacity: 0;
+    }
+
+    to {
+        top: 5rem;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        top: 5rem;
+        opacity: 1;
+    }
+
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
