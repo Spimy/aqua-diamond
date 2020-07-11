@@ -1,2 +1,2 @@
 # aqua-diamond
-A Minecraft website template that is free to use. Enjoy.
+A single page Minecraft website template that is free to use. Enjoy.
