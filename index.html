@@ -15,19 +15,30 @@
     <header id="sticky_nav">
         <a href="."><img class="icon" src="img/icon.png" alt="small logo"></a>
         <nav id="nav">
-            <a href="#"><i class="fas fa-home"></i>Home</a>
+            <a href="#home"><i class="fas fa-home"></i>Home</a>
             <a href="#games"><i class="fas fa-gamepad"></i>Games</a>
             <a href="#about"><i class="fas fa-info"></i>About</a>
             <a href="#team"><i class="fas fa-users"></i>Team</a>
             <a href="/shop"><i class="fas fa-shopping-cart"></i>Shop</a>
             <a href="/forum"><i class="fas fa-comments"></i>Forum</a>
         </nav>
-        <button id="close-btn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <button id="close-btn"><i class="fas fa-bars"></i></button>
     </header>
 
-    <section id="#"></section>
+    <div id="msg_box"></div>
 
-    <script src="js/script.js"></script>
+    <section id="home">
+        <div class="hero">
+            <h1 id="title">Welcome to Server</h1>
+            <p id="subtitle">Join <span class="player-count">0</span> players on our server today at <span
+                    class="server-ip" onclick="">server.ip</span>!</p>
+        </div>
+    </section>
+
+    <div class="container">
+    </div>
+
+    <script type="module" src="js/script.js"></script>
 </body>
 
 </html>
