@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;600;800;900&display=swap');
+
+$primary: var(--primary);
+$secondary: var(--secondary);
+$bg-primary: var(--bg-primary);
+$text: var(--text);
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --primary: #1c706c;
+    --secondary: #61FFD0;
+    --bg-primary: #323d46;
+    --text: #f1f1f1;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: $bg-primary;
+    color: $text;
+}
+
+a,
+a:focus {
+    color: $text;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    color: $text;
+    border: none;
+}
